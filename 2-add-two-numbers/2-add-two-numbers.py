@@ -6,6 +6,7 @@
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
         
+        # make numbers to string
         num1 = ''
         num2 = ''
         
@@ -22,17 +23,17 @@ class Solution:
         # add numbers together
         number = (str(int(num1[::-1]) + int(num2[::-1])))
         
-       
+        # do first iteration
         i = len(number)-1
         a = ListNode(number[i])
         answer = a
         
+        # create linked list 
         i -=1
         while (i >=0):
             a.next = ListNode(number[i])
             a = a.next
             i-=1
-
         
         return answer
             
